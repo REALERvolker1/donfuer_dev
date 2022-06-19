@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build && robocopy src/images dist/images",
     "preview": "vite preview",
-    "gitsync": "git pull && git add -A && git commit -am \"autoPush\" && git push && git subtree push --prefix dist origin gh-pages"
+    "gitsync": "node BuildScript.cjs && git pull && git add -A && git commit -am \"autoPush\" && git push && git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "typescript": "^4.5.4",
