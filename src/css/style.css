@@ -1,0 +1,68 @@
+@import url('./globals.css');
+@import url('./navbar.css');
+
+body {
+  font-family:var(--textFont);
+  background-color:var(--backgroundColor);
+}
+
+.noSelect {
+  user-select:none;
+  -webkit-user-drag:none;
+  -moz-user-select:none;
+}
+
+.hoverableButton {
+  display:block;
+}
+
+.main {
+  display:flex;
+  width:80%;
+  max-width:1800px;
+  margin:auto;
+  margin-top:40px;
+  margin-bottom:40px;
+  padding:20px;
+}
+@media only screen and (max-width:600px) {
+  .main{
+    width:90%;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding:5px;
+  }
+}
+
+/* ty for the code https://cssgrid-generator.netlify.app/ */
+.mediaContainer {
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  grid-template-rows:repeat(6, 1fr);
+  grid-gap:0px;
+}
+.area1 { grid-area: 1 / 1 / 2 / 3; }
+.area2 { grid-area: 2 / 1 / 3 / 2; }
+.area3 { grid-area: 2 / 2 / 3 / 3; }
+.area4 { grid-area: 3 / 1 / 4 / 3; }
+.area5 { grid-area: 4 / 1 / 5 / 2; }
+.area6 { grid-area: 4 / 2 / 5 / 3; }
+.area7 { grid-area: 5 / 1 / 6 / 3; }
+.area8 { grid-area: 6 / 1 / 7 / 2; }
+.area9 { grid-area: 6 / 2 / 7 / 3; }
+.area10 { grid-area: 7 / 1 / 8 / 3; }
+.area11 { grid-area: 8 / 1 / 9 / 2; }
+.area12 { grid-area: 8 / 2 / 9 / 3; }
+.area13 { grid-area: 9 / 1 / 10 / 3; }
+
+.lazyImage {
+  position:relative;
+}
+.lazyImage p {
+  position:absolute;
+  inset:auto 1% 1% 1%;
+  background:#0008;
+  padding:2%;
+  color:var(--textLightColor);
+  overflow-wrap:anywhere;
+}
